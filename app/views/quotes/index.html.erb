@@ -1,18 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Quotes</h1>
+<h1 style="text-shadow:2px 2px 0 #444" class="w3-text-sand w3-container w3-lobster">Quotes</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Author</th>
-      <th>Quotation</th>
-      <th>Source</th>
+      <th  class="w3-container w3-lobster">Author</th>
+      <th class="w3-container w3-lobster">Quotation</th>
+      <th class="w3-container w3-lobster">Source</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+
+
     <% @quotes.each do |quote| %>
       <tr>
         <td><%= quote.author %></td>
