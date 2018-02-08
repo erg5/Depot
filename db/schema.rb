@@ -10,19 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180131195331) do
+ActiveRecord::Schema.define(version: 20180207201916) do
 
-  create_table "quotes", force: :cascade do |t|
-    t.string "author"
-    t.string "quotation"
-    t.string "source"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "Name"
-    t.string "Email"
+  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "image_url"
+    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
