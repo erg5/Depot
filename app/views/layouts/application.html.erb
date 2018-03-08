@@ -30,7 +30,14 @@
     <a href="/line_items" class="w3-button w3-round w3-border w3-border-sand w3-lobster">Line Items</a>
      <a href="/orders"  class="w3-button w3-round w3-border w3-border-sand w3-lobster">Orders</a> 
      
-    
+    <% if session[:user_id] %>
+ <ul>
+ <li><%= link_to 'Orders', orders_path %></li>
+ <li><%= link_to 'Products', products_path %></li>
+ <li><%= link_to 'Users', users_path %></li>
+ </ul>
+ <%= button_to 'Logout', logout_path, method: :delete %>
+ <% end %>
 
   
  <p class="w3-margin-bottom"></p>
